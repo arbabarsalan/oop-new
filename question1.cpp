@@ -12,7 +12,7 @@ int main()
 
 
 
-    int row =0;
+     int row =0;
 int colum =0;
 
 cout<<"enter no of rows";
