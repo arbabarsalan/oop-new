@@ -69,15 +69,11 @@ void print_student_info(students student[], int size) {
     cout << "============================================\n\n";
 
     cout << "------------------------------------------------------\n";
-    cout << "  ID    |   Name       |  Age  |  GPA  |  Credits  \n";
+    cout << "  ID\tName\tAge\tGPA\tCredits\t\n";
     cout << "------------------------------------------------------\n";
 
     for (int i = 0; i < size; i++) {
-        cout << "  " << student[i].id << "    |   "
-             << student[i].name << "    |   "
-             << student[i].age << "    |  "
-             << student[i].gpa << "   |    "
-             << student[i].credits << endl;
+        cout << "" << student[i].id <<"\t"<< student[i].name << "\t"<< student[i].age << "\t"<< student[i].gpa <<"\t"<< student[i].credits<<endl;
     }
 
     cout << "------------------------------------------------------\n";
