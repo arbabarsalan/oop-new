@@ -32,7 +32,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="main.cpp" />
+		<Unit filename="question1.cpp" />
+		<Unit filename="question2.cpp" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

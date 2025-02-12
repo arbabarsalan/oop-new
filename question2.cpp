@@ -44,6 +44,7 @@ cout<<endl;
 }}
 
 
+//***************************printing student info*************************
 void print_student_info(students student[], int size) {
     cout << "\n============================================\n";
     cout << "         STUDENT MANAGEMENT SYSTEM          \n";
@@ -59,9 +60,21 @@ void print_student_info(students student[], int size) {
 
     cout << "------------------------------------------------------\n";
 }
+//************************** printing info of student with highest gpa***************************************
+
+void printing_highest_gpa_info (students student[] ,int index)
+{
+cout<<"*************student with highest gpa is**********";
+    cout << "------------------------------------------------------\n";
+    cout << "  ID\tName\tAge\tGPA\tCredits\t\n";
+    cout << "------------------------------------------------------\n";
+    cout << "" << student[index].id <<"\t"<< student[index].name << "\t"<< student[index].age << "\t"<< student[index].gpa <<"\t"<< student[index].credits<<endl;
+}
 
 
-void highest_gpa(students student[], int size) {
+
+
+void  finding_highest_gpa(students student[], int size) {
     float highest_gpa = student[0].gpa;
     int index = 0;
 
@@ -70,15 +83,18 @@ void highest_gpa(students student[], int size) {
             highest_gpa = student[i].gpa;
             index = i;
         }
+        else if (student[i].gpa==highest_gpa){
+            cout<<"more than one student has highest gpa ( SAME GPA)";
+            return;
+        }
     }
-    cout<<"*************student with highest gpa is**********";
-    cout << "------------------------------------------------------\n";
-    cout << "  ID\tName\tAge\tGPA\tCredits\t\n";
-    cout << "------------------------------------------------------\n";
-    cout << "" << student[index].id <<"\t"<< student[index].name << "\t"<< student[index].age << "\t"<< student[index].gpa <<"\t"<< student[index].credits<<endl;
+
+    printing_highest_gpa_info (student , index);
 
 
 }
+
+
 
 
 
@@ -125,9 +141,9 @@ cin>>size;
 students *student= new students [size];
 
 studentinfo ( student,size);
-//highest_gpa(student,  size);
-swaping (student, size);
- print_student_info(student,  size);
+finding_highest_gpa(student,  size);
+//swaping (student, size);
+ //print_student_info(student,  size);
 
 
 return 0;
