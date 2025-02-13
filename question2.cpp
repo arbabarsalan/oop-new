@@ -17,29 +17,29 @@ int credits;
 };
 
 // *************function for input*********************
-void studentinfo (  students *student, int size){
+void studentinfo (  students *student, int size) {
 
-for (int i=0; i<size ; i++)
-{
+    for (int i=0; i<size ; i++) {
 
-cout<<"enter student "<<i+1<<" id        ";cin>>(*(student+i)).id;
-int ch;
-cout<<"how many character does your name has?  ";cin>>ch;
-cin.ignore();
-
-
-// ******************dynamoc array for name****************
-(*(student+i)).name= new char [ch+1];
-cout<<"enter student "<<i+1<<" name       ";
-cin.getline((*(student+i)).name,ch+1);
+        cout<<"enter student "<<i+1<<" id        ";cin>>(*(student+i)).id;
+        int ch;
+        cout<<"how many character does your name has?  ";cin>>ch;
+        cin.ignore();
 
 
+        // ******************dynamoc array for name****************
+        (*(student+i)).name= new char [ch+1];
+        cout<<"enter student "<<i+1<<" name       ";
+        cin.getline((*(student+i)).name,ch+1);
 
-cout<<"enter student  "<<i+1<<" age       ";cin>>(*(student+i)).age;
-cout<<"enter student "<<i+1<< " gpa       ";cin>>(*(student+i)).gpa;
-cout<<"enter student "<<i+1<< " credits   ";cin>>(*(student+i)).credits;
-cout<<endl;
-}}
+
+
+        cout<<"enter student  "<<i+1<<" age       ";cin>>(*(student+i)).age;
+        cout<<"enter student "<<i+1<< " gpa       ";cin>>(*(student+i)).gpa;
+        cout<<"enter student "<<i+1<< " credits   ";cin>>(*(student+i)).credits;
+        cout<<endl;
+    }
+}
 
 
 //***************************printing student info*************************
@@ -55,7 +55,7 @@ void print_student_info(students *student, int size) {
     for (int i = 0; i < size; i++) {
         cout << "" << (*(student+i)).id <<"\t"<< (*(student+i)).name << "\t"<< (*(student+i)).age << "\t"<< (*(student+i)).gpa <<"\t"<< (*(student+i)).credits<<endl;
     }
-
+  
     cout << "------------------------------------------------------\n";
 }
 //************************** printing info of student with highest gpa***************************************
@@ -284,3 +284,5 @@ return 0;
 
 
 
+//*********    imp line
+//           delete [] student[0].name;
