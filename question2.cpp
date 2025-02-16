@@ -162,23 +162,7 @@ cout<<"enter student "<<index+1<< " credits   ";cin>>(*(student+index)).credits;
 cout<<endl;}
 else{cout<<"no id found";}
 }
-//*************** deleting student data  *************************
-void deleting (students *student, int size,int roll_no){
-bool is_found=false;
-int index=0;
-for(int i=0; i<size;i++){
-if((*(student+i)).id==roll_no){
-is_found=true;
-index=i;
-}}
-if(is_found){
 
-//delete student[ind]
-
-}
-
-
-}
 int main()
 {
 
@@ -276,13 +260,10 @@ swaping (student, size);
 print_student_info(student,  size);
 
 delete[] student;
-cout<<student[0].age<<"akjdagdkj";
+student=nullptr;
 
 return 0;
 
 }
 
 
-
-//*********    imp line
-//           delete [] student[0].name;
